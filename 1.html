@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        var names = ["我是","不是","你么么",""]
+        ReactDOM.render(
+            <div>
+                {
+                    names.map(function(name){
+                        console.log(arguments);
+                        return <div key={name}>Hello, {name}, names={names}</div>
+                    })
+                }
+            </div>,
+            document.querySelector('#app')
+        )
+    </script>
+
+</body>
+
+</html>

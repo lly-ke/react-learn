@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  color: blue;
+}
+
+
+.MyClass{
+  color: yellow;
+  text-align:center;
+  font-size: 150px;
+}
+
+
+body{
+}
+
+.abc {
+  width:100%;
+  padding-bottom: 100%;
+  background: #333;
+}
