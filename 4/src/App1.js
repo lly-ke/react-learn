@@ -1,21 +1,22 @@
-import React from 'react';
-import * as actions from "./redux/actions";
+import React, {Component} from "react";
+import * as actions from './redux-two/actions'
 
-class App extends React.Component {
-
+export default class App1 extends Component {
     constructor(props, context) {
         super(props, context);
+
+        this.state = {
+            count: 0
+        }
+
         this.props.store.subscribe(() => {
             this.setState({
                 count: this.props.store.getState()
-            });
+            })
         })
     }
 
 
-    state = {
-        count: 0
-    }
 
     increment = () => {
         this.props.store.dispatch(actions.incrementCreator(2))
@@ -36,5 +37,3 @@ class App extends React.Component {
     }
 
 }
-
-export default App;
